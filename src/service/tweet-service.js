@@ -41,7 +41,7 @@ class TweetService {
         }
     }
     async getTweet(tweetId){
-        const tweet = await this.tweetRepository.getTweetById(tweetId);
+        const tweet = await this.tweetRepository.get(tweetId);
         return tweet;
     }
 }
