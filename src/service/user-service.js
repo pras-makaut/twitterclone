@@ -30,9 +30,9 @@ class UserService {
                     message:'Password does not match please enter the right password'
                 }
             }
-            return {
-                message:'User signed in'
-            }
+            console.log('User signed in');
+            const token = user[0].genJwt();
+            return token;
         } catch (error) {
             console.log(error);
             throw error;
